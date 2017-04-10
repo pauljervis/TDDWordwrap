@@ -45,7 +45,7 @@ namespace Example.CountWords
         //    return (input.Split(' ').Length);
         //}
 
-        //4
+        //// 4
         //public int CountWords(string input)
         //{
         //    if (string.IsNullOrWhiteSpace(input))

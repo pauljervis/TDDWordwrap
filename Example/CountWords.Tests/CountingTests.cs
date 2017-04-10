@@ -8,19 +8,23 @@ namespace CountWords.Tests
     public class CountingTests
     {
         [TestMethod]
-        public void WhenGivenAnEmptyStringReturnZero()
+        public void AnEmptyStringGivesNoWords()
         {
+            //Arrange
             var service = new Counter();
             var expectedResult = 0;
             var input = "";
 
+            //Act
             var actualResult = service.CountWords(input);
+
+            //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
 
         //[TestMethod]
-        //public void WhenGivenASingleWordReturnOne()
+        //public void AStringWithNoSpacesGivesOneWord()
         //{
         //    var service = new Counter();
         //    var expectedResult = 1;
@@ -33,7 +37,7 @@ namespace CountWords.Tests
         //// Remove usings
 
         //[TestMethod]
-        //public void WhenGivenTwoWordsReturnTwo()
+        //public void AStringWithOneSpaceGivesTwoWords()
         //{
         //    var service = new Counter();
         //    var expectedResult = 2;
@@ -46,7 +50,7 @@ namespace CountWords.Tests
         ////Refactor - count spaces
 
         //[TestMethod]
-        //public void WhenGivenThreeWordsWithExtraSpacesStillReturnThree()
+        //public void AStringWithThreeWordsWithExtraSpacesStillGivesThree()
         //{
         //    var service = new Counter();
         //    var expectedResult = 3;
